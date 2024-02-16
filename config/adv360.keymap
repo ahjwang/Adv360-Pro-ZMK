@@ -33,6 +33,15 @@
     macros {
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        combo1 {
+            bindings = <&kp V>;
+            key-positions = <15 17>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
