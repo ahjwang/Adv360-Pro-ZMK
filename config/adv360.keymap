@@ -39,6 +39,17 @@
         combo1 {
             bindings = <&kp V>;
             key-positions = <15 17>;
+            layers = <0 3>;
+        };
+
+        combo2 {
+            bindings = <&mo 1>;
+            key-positions = <29 31>;
+        };
+
+        combo3 {
+            bindings = <&macro_ver>;
+            key-positions = <22 24>;
         };
     };
 
