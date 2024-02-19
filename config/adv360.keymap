@@ -79,7 +79,7 @@
         compatible = "zmk,combos";
 
         combo_comma_space {
-            bindings = <&macro_1>;
+            bindings = <&kp LG(LALT)>;
             key-positions = <56 70>;
         };
     };
