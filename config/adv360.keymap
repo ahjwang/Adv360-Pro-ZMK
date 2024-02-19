@@ -18,11 +18,11 @@
             bindings = <&kp LS(T) &kp Y &kp P &kp E &kp SPACE &kp S &kp O &kp M &kp E &kp T &kp H &kp I &kp N &kp G &kp DOT &kp DOT &kp DOT>;
         };
 
-        comma_space: comma_space {
+        macro_comma_space: macro_comma_space {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp COMMA &kp SPACE>;
-            label = "COMMA_SPACE";
+            label = "MACRO_COMMA_SPACE";
         };
 
         cmd_alt: cmd_alt {
@@ -114,7 +114,7 @@
         compatible = "zmk,combos";
 
         combo_comma_space {
-            bindings = <&macro_ver>;
+            bindings = <&macro_comma_space>;
             key-positions = <56 70>;
         };
     };
