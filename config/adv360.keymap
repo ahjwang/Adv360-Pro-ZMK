@@ -79,8 +79,8 @@
         compatible = "zmk,combos";
 
         combo_comma_space {
-            bindings = <&kp LG(LALT)>;
-            key-positions = <56 70>;
+            bindings = <&sk_cust LG(LALT)>;
+            key-positions = <66 69>;
         };
     };
 
@@ -89,11 +89,11 @@
 
         default_layer {
             bindings = <
-&sl 1                  &kp N1  &kp N2      &kp N3    &kp N4     &kp N5  &bt BT_SEL 4                                                                    &bt BT_CLR  &kp N6  &kp N7  &kp N8     &kp N9    &kp N0     &sl 2
-&kp TAB                &kp Q   &kp W       &kp E     &kp R      &kp T   &bt BT_SEL 0                                                                    &bt BT_NXT  &kp Y   &kp U   &kp I      &kp O     &kp P      &kp GRAVE
-&sk_cust LEFT_SHIFT    &kp A   &kp S       &kp D     &kp F      &kp G   &bt BT_SEL 1  &bootloader  &kp C_BRIGHTNESS_INC      &bl BL_TOG    &bootloader  &bt BT_PRV  &kp H   &kp J   &kp K      &kp L     &kp APOS   &sk RIGHT_SHIFT
-&sk_cust LCMD          &kp Z   &kp X       &kp C     &kp V      &kp B                              &kp C_BRIGHTNESS_DEC      &bl BL_CYCLE                           &kp N   &kp M   &kp COMMA  &kp DOT   &kp COLON  &sk_cust RIGHT_ALT
-&sk_cust LEFT_CONTROL  &none   &caps_word  &kp LEFT  &kp RIGHT          &mo 3         &mo 4        &none                     &kp DEL       &kp ENTER    &kp SPACE           &kp UP  &kp DOWN   &kp SEMI  &none      &sk_cust RIGHT_CONTROL
+&sl 1                  &kp N1             &kp N2      &kp N3    &kp N4     &kp N5  &bt BT_SEL 4                                                                     &bt BT_CLR  &kp N6  &kp N7  &kp N8     &kp N9    &kp N0             &sl 2
+&kp TAB                &kp Q              &kp W       &kp E     &kp R      &kp T   &bt BT_SEL 0                                                                     &bt BT_NXT  &kp Y   &kp U   &kp I      &kp O     &kp P              &kp GRAVE
+&sk_cust LEFT_SHIFT    &kp A              &kp S       &kp D     &kp F      &kp G   &bt BT_SEL 1  &bootloader  &kp C_BRIGHTNESS_INC       &bl BL_TOG    &bootloader  &bt BT_PRV  &kp H   &kp J   &kp K      &kp L     &kp APOS           &sk RIGHT_SHIFT
+&sk_cust LCMD          &kp Z              &kp X       &kp C     &kp V      &kp B                              &kp C_BRIGHTNESS_DEC       &bl BL_CYCLE                           &kp N   &kp M   &kp COMMA  &kp DOT   &kp COLON          &sk_cust RIGHT_ALT
+&sk_cust LEFT_CONTROL  &sk_cust LC(LCMD)  &caps_word  &kp LEFT  &kp RIGHT          &mo 3         &mo 4        &sk_cust LC(LA(LCMD))      &kp DEL       &kp ENTER    &kp SPACE           &kp UP  &kp DOWN   &kp SEMI  &sk_cust LC(LALT)  &sk_cust RIGHT_CONTROL
             >;
         };
 
