@@ -7,7 +7,7 @@
 
 / {
     behaviors {
-        #include "macros.dtsi"
+      #include "macros.dtsi"
       #include "version.dtsi"
       #ifndef VERSION_MACRO
 
@@ -84,7 +84,7 @@
         };
 
         combo_macro1 {
-            bindings = <&macro1>;
+            bindings = <&macro_quotes>;
             key-positions = <22 24>;
         };
     };
