@@ -147,11 +147,11 @@
 
         code {
             bindings = <
-&trans  &trans                 &trans               &trans                 &trans                   &trans              &trans                                         &trans         &trans                  &trans           &trans               &trans                       &trans                        &trans
-&trans  &trans                 &kp GREATER_THAN     &kp RIGHT_BRACE        &kp RIGHT_PARENTHESIS    &kp RIGHT_BRACKET   &trans                                         &trans         &kp PLUS                &kp EQUAL        &kp ESCAPE           &kp UNDER                    &kp MINUS                     &trans
-&trans  &ht_num EXCL NUMBER_1  &ht_num AT NUMBER_2  &ht_num HASH NUMBER_3  &ht_num DOLLAR NUMBER_4  &ht_num PERCENT N5  &trans  &trans  &trans      &trans     &trans  &trans         &ht_num CARET NUMBER_6  &ht_num AMPS N7  &ht_num ASTERISK N8  &ht_num LEFT_PARENTHESIS N9  &ht_num RIGHT_PARENTHESIS N0  &trans
-&trans  &kp SPACE              &kp LESS_THAN        &kp LEFT_BRACE         &kp LEFT_PARENTHESIS     &kp LEFT_BRACKET                    &trans      &trans                            &kp BACKSLASH           &kp SLASH        &space_after COMMA   &space_after PERIOD          &space_after COLON            &trans
-&trans  &trans                 &kp CAPS             &trans                 &trans                                       &trans  &trans  &trans      &kp SPACE  &trans  &kp BACKSPACE                          &trans           &trans               &trans                       &trans                        &trans
+&trans  &trans           &trans                     &trans                    &trans                          &trans             &trans                                         &trans         &trans             &trans              &trans              &trans               &trans              &trans
+&trans  &trans           &space_after LESS_THAN     &space_after RIGHT_BRACE  &space_after RIGHT_PARENTHESIS  &space_after RBKT  &trans                                         &trans         &space_after PLUS  &space_after EQUAL  &kp ESCAPE          &space_after UNDER   &space_after MINUS  &trans
+&trans  &space_after N1  &space_after N2            &space_after N3           &space_after N4                 &space_after N5    &trans  &trans  &trans      &trans     &trans  &trans         &space_after N6    &space_after N7     &space_after N8     &space_after N9      &space_after N0     &trans
+&trans  &kp SPACE        &space_after GREATER_THAN  &space_after LEFT_BRACE   &space_after LEFT_PARENTHESIS   &space_after LBKT                  &trans      &trans                            &space_after BSLH  &space_after FSLH   &space_after COMMA  &space_after PERIOD  &space_after COLON  &trans
+&trans  &trans           &kp CAPS                   &trans                    &trans                                             &trans  &trans  &trans      &kp SPACE  &trans  &kp BACKSPACE                     &trans              &trans              &trans               &trans              &trans
             >;
         };
 
