@@ -14,7 +14,7 @@
         macro1: macro1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp A>;
+            bindings = <&kp LS(T) &kp Y &kp P &kp E &kp SPACE &kp S &kp O &kp M &kp E &kp T &kp H &kp I &kp N &kp G &kp DOT &kp DOT &kp DOT>;
             label = "MACRO1";
         };
 
