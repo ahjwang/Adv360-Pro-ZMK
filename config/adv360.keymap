@@ -28,7 +28,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-            quick-tap-ms = <100>;
+            quick-tap-ms = <150>;
             require-prior-idle-ms = <0>;
         };
 
@@ -63,11 +63,25 @@
     };
 
     macros {
-        macro_comma_space: macro_comma_space {
+        macro_ver: macro_comma_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "macro_comma_space";
+        };
+
+        macro_comma_space: macro_ver {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp COMMA &kp SPACE>;
-            label = "macro_comma_space";
+            label = "MACRO_VER";
+        };
+
+        macro_comma_layer: macro_comma_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA &sl 5>;
+            label = "MACRO_COMMA_LAYER";
         };
     };
 
@@ -123,7 +137,7 @@
 &trans  &trans                 &trans               &trans                 &trans                   &trans              &trans                                      &trans         &trans                  &trans           &trans               &trans                       &trans                        &trans
 &trans  &trans                 &kp GREATER_THAN     &kp RIGHT_BRACE        &kp RIGHT_PARENTHESIS    &kp RIGHT_BRACKET   &trans                                      &trans         &kp PLUS                &kp EQUAL        &kp ESCAPE           &kp UNDER                    &kp MINUS                     &trans
 &trans  &ht_num EXCL NUMBER_1  &ht_num AT NUMBER_2  &ht_num HASH NUMBER_3  &ht_num DOLLAR NUMBER_4  &ht_num PERCENT N5  &trans  &trans  &trans      &trans  &trans  &trans         &ht_num CARET NUMBER_6  &ht_num AMPS N7  &ht_num ASTERISK N8  &ht_num LEFT_PARENTHESIS N9  &ht_num RIGHT_PARENTHESIS N0  &trans
-&trans  &kp SPACE              &kp LESS_THAN        &kp LEFT_BRACE         &kp LEFT_PARENTHESIS     &kp LEFT_BRACKET                    &trans      &trans                         &kp BACKSLASH           &kp SLASH        &trans               &trans                       &trans                        &trans
+&trans  &kp SPACE              &kp LESS_THAN        &kp LEFT_BRACE         &kp LEFT_PARENTHESIS     &kp LEFT_BRACKET                    &trans      &trans                         &kp BACKSLASH           &kp SLASH        &macro_comma_layer   &trans                       &trans                        &trans
 &trans  &trans                 &kp CAPS             &trans                 &trans                                       &trans  &trans  &trans      &trans  &trans  &kp BACKSPACE                          &trans           &trans               &trans                       &trans                        &trans
             >;
         };
@@ -135,6 +149,16 @@
 &trans  &trans  &trans            &trans      &trans      &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp PAGE_DOWN  &kp LEFT_ARROW   &kp DOWN_ARROW      &kp RIGHT_ARROW  &trans  &trans
 &trans  &trans  &trans            &trans      &trans      &trans                  &trans      &trans                  &trans         &trans           &kp LG(DOWN_ARROW)  &kt RIGHT_SHIFT  &trans  &trans
 &trans  &trans  &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_NEXT          &trans  &trans  &trans      &trans  &trans  &trans                 &kp C_VOLUME_UP  &kp C_VOLUME_DOWN   &kp C_MUTE       &trans  &trans
+            >;
+        };
+
+        layer_space {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &kp SPACE          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
