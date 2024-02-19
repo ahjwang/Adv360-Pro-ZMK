@@ -32,6 +32,27 @@
             label = "CMD_ALT";
         };
 
+        ctrl_cmd: ctrl_cmd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk_cust LEFT_CONTROL &sk_cust LCMD>;
+            label = "CTRL_CMD";
+        };
+
+        ctrl_alt: ctrl_alt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk_cust LEFT_CONTROL &kp LEFT_ALT>;
+            label = "CTRL_ALT";
+        };
+
+        ctrl_cmd_alt: ctrl_cmd_alt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &sk_cust LCMD &sk LEFT_ALT>;
+            label = "CTRL_CMD_ALT";
+        };
+
         #endif
 
         hm: homerow_mods {
@@ -89,19 +110,7 @@
     macros {
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        combo_comma_space {
-            bindings = <&comma_space>;
-            key-positions = <56 70>;
-        };
-
-        combo_cmd_alt {
-            bindings = <&cmd_alt>;
-            key-positions = <66 69>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
