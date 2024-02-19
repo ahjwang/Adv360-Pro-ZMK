@@ -18,6 +18,13 @@
             bindings = <&kp LS(T) &kp Y &kp P &kp E &kp SPACE &kp S &kp O &kp M &kp E &kp T &kp H &kp I &kp N &kp G &kp DOT &kp DOT &kp DOT>;
         };
 
+        comma_space: comma_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA &kp SPACE>;
+            label = "COMMA_SPACE";
+        };
+
         #endif
 
         hm: homerow_mods {
@@ -78,20 +85,15 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_1 {
-            bindings = <&kp LS(V)>;
-            key-positions = <15 17>;
-            layers = <0>;
+        combo_comma_space {
+            bindings = <&comma_space>;
+            key-positions = <56 70>;
+            layers = <3 4 0>;
         };
 
-        combo_2 {
-            bindings = <&mo 4>;
-            key-positions = <29 31>;
-        };
-
-        combo_3 {
-            bindings = <&macro_ver>;
-            key-positions = <22 24>;
+        combo_cmd_alt {
+            bindings = <&sk_cust LG(LALT)>;
+            key-positions = <66 69>;
         };
     };
 
@@ -100,11 +102,11 @@
 
         default_layer {
             bindings = <
-&sl 1                  &kp N1      &kp N2      &kp N3    &kp N4     &kp N5  &bt BT_SEL 4                                                                                                           &bt BT_CLR        &kp N6  &kp N7  &kp N8     &kp N9    &kp N0     &sl 2
-&kp TAB                &kp Q       &kp W       &kp E     &kp R      &kp T   &bt BT_SEL 0                                                                                                           &bt BT_NXT        &kp Y   &kp U   &kp I      &kp O     &kp P      &kp GRAVE
-&sk_cust LEFT_SHIFT    &kp A       &kp S       &kp D     &kp F      &kp G   &bt BT_SEL 1          &bootloader                   &kp C_BRIGHTNESS_INC      &bl BL_TOG    &bootloader                &bt BT_PRV        &kp H   &kp J   &kp K      &kp L     &kp APOS   &sk RIGHT_SHIFT
-&sk_cust LCMD          &kp Z       &kp X       &kp C     &kp V      &kp B                                                       &kp C_BRIGHTNESS_DEC      &bl BL_CYCLE                                               &kp N   &kp M   &kp COMMA  &kp DOT   &kp COLON  &sk_cust RIGHT_ALT
-&sk_cust LEFT_CONTROL  &kp ESCAPE  &caps_word  &kp LEFT  &kp RIGHT          &lt_cust 3 BACKSPACE  &ht_cust LEFT_COMMAND ESCAPE  &kp BACKSPACE             &kp SPACE     &ht_cust RIGHT_ALT RETURN  &lt_cust 4 SPACE          &kp UP  &kp DOWN   &kp SEMI  &kp RET    &sk_cust RIGHT_CONTROL
+&sl 1                  &kp N1        &kp N2      &kp N3    &kp N4     &kp N5  &bt BT_SEL 4                                                                    &bt BT_CLR  &kp N6  &kp N7  &kp N8     &kp N9    &kp N0             &sl 2
+&kp TAB                &kp Q         &kp W       &kp E     &kp R      &kp T   &bt BT_SEL 0                                                                    &bt BT_NXT  &kp Y   &kp U   &kp I      &kp O     &kp P              &kp GRAVE
+&sk_cust LEFT_SHIFT    &kp A         &kp S       &kp D     &kp F      &kp G   &bt BT_SEL 1  &bootloader  &kp C_BRIGHTNESS_INC      &bl BL_TOG    &bootloader  &bt BT_PRV  &kp H   &kp J   &kp K      &kp L     &kp APOS           &sk RIGHT_SHIFT
+&sk_cust LCMD          &kp Z         &kp X       &kp C     &kp V      &kp B                              &kp C_BRIGHTNESS_DEC      &bl BL_CYCLE                           &kp N   &kp M   &kp COMMA  &kp DOT   &kp COLON          &sk_cust RIGHT_ALT
+&sk_cust LEFT_CONTROL  &kp LC(LCMD)  &caps_word  &kp LEFT  &kp RIGHT          &mo 3         &mo 4        &kp LC(LG(LEFT_ALT))      &kp DEL       &kp ENTER    &kp SPACE           &kp UP  &kp DOWN   &kp SEMI  &sk_cust RC(RALT)  &sk_cust RIGHT_CONTROL
             >;
         };
 
@@ -130,11 +132,11 @@
 
         layer_4 {
             bindings = <
-&trans  &trans                 &trans               &trans                 &trans                   &trans              &trans                                      &trans  &trans                  &trans           &trans               &trans                       &trans                        &trans
-&trans  &trans                 &kp GREATER_THAN     &kp RIGHT_BRACE        &kp RIGHT_PARENTHESIS    &kp RIGHT_BRACKET   &trans                                      &trans  &kp PLUS                &kp EQUAL        &kp UNDER            &kp MINUS                    &trans                        &trans
-&trans  &ht_num EXCL NUMBER_1  &ht_num AT NUMBER_2  &ht_num HASH NUMBER_3  &ht_num DOLLAR NUMBER_4  &ht_num PERCENT N5  &trans  &trans  &trans      &trans  &trans  &trans  &ht_num CARET NUMBER_6  &ht_num AMPS N7  &ht_num ASTERISK N8  &ht_num LEFT_PARENTHESIS N9  &ht_num RIGHT_PARENTHESIS N0  &trans
-&trans  &trans                 &kp LESS_THAN        &kp LEFT_BRACE         &kp LEFT_PARENTHESIS     &kp LEFT_BRACKET                    &trans      &trans                  &kp BACKSLASH           &kp SLASH        &trans               &trans                       &trans                        &trans
-&trans  &trans                 &kp CAPS             &trans                 &trans                                       &trans  &trans  &trans      &trans  &trans  &trans                          &trans           &trans               &trans                       &trans                        &trans
+&trans  &trans                 &trans               &trans                 &trans                   &trans              &trans                                      &trans         &trans                  &trans           &trans               &trans                       &trans                        &trans
+&trans  &trans                 &kp GREATER_THAN     &kp RIGHT_BRACE        &kp RIGHT_PARENTHESIS    &kp RIGHT_BRACKET   &trans                                      &trans         &kp PLUS                &kp EQUAL        &kp ESCAPE           &kp UNDER                    &kp MINUS                     &trans
+&trans  &ht_num EXCL NUMBER_1  &ht_num AT NUMBER_2  &ht_num HASH NUMBER_3  &ht_num DOLLAR NUMBER_4  &ht_num PERCENT N5  &trans  &trans  &trans      &trans  &trans  &trans         &ht_num CARET NUMBER_6  &ht_num AMPS N7  &ht_num ASTERISK N8  &ht_num LEFT_PARENTHESIS N9  &ht_num RIGHT_PARENTHESIS N0  &trans
+&trans  &kp SPACE              &kp LESS_THAN        &kp LEFT_BRACE         &kp LEFT_PARENTHESIS     &kp LEFT_BRACKET                    &trans      &trans                         &kp BACKSLASH           &kp SLASH        &trans               &trans                       &trans                        &trans
+&trans  &trans                 &kp CAPS             &trans                 &trans                                       &trans  &trans  &trans      &trans  &trans  &kp BACKSPACE                          &trans           &trans               &trans                       &trans                        &trans
             >;
         };
 
