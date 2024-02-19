@@ -63,18 +63,11 @@
     };
 
     macros {
-        macro_ver: macro_comma_space {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <>;
-            label = "macro_comma_space";
-        };
-
-        macro_comma_space: macro_ver {
+        macro_comma_space: macro_comma_space {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp COMMA &kp SPACE>;
-            label = "MACRO_VER";
+            label = "macro_comma_space";
         };
 
         macro_comma_layer: macro_comma_layer {
