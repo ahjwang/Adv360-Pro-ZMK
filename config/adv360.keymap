@@ -25,6 +25,13 @@
             label = "COMMA_SPACE";
         };
 
+        cmd_alt: cmd_alt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk_cust LCMD &sk_cust LALT>;
+            label = "CMD_ALT";
+        };
+
         #endif
 
         hm: homerow_mods {
@@ -91,7 +98,7 @@
         };
 
         combo_cmd_alt {
-            bindings = <&sk_cust LG(LEFT_ALT)>;
+            bindings = <&cmd_alt>;
             key-positions = <66 69>;
         };
     };
