@@ -114,7 +114,7 @@
         compatible = "zmk,combos";
 
         combo_comma_space {
-            bindings = <&comma_space>;
+            bindings = <&kp A>;
             key-positions = <56 70>;
         };
     };
