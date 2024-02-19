@@ -11,11 +11,11 @@
       #include "version.dtsi"
       #ifndef VERSION_MACRO
 
-        macro_1: macro_1 {
+        macro1: macro1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(T) &kp Y &kp P &kp E &kp SPACE &kp S &kp O &kp M &kp E &kp T &kp H &kp I &kp N &kp G &kp DOT &kp DOT &kp DOT>;
-            label = "MACRO_1";
+            bindings = <&kp A>;
+            label = "MACRO1";
         };
 
         #endif
@@ -78,9 +78,14 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_comma_space {
+        combo_cmd_alt {
             bindings = <&sk_cust LG(LALT)>;
             key-positions = <66 69>;
+        };
+
+        combo_macro1 {
+            bindings = <&macro1>;
+            key-positions = <22 24>;
         };
     };
 
@@ -138,12 +143,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        cond_1 {
-            if-layers = <2 4>;
-            then-layer = <4>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
