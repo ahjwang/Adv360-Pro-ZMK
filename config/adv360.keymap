@@ -82,7 +82,19 @@
     macros {
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        combo_comma_space {
+            bindings = <&comma_space>;
+            key-positions = <56 70>;
+        };
+
+        combo_cmd_alt {
+            bindings = <&sk_cust LG(LEFT_ALT)>;
+            key-positions = <66 69>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
