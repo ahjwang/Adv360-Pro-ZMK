@@ -75,6 +75,20 @@
             bindings = <&kp COMMA &sl 5>;
             label = "MACRO_COMMA_LAYER";
         };
+
+        macro_colon_layer: macro_colon_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &sl 5>;
+            label = "MACRO_COLON_LAYER";
+        };
+
+        macro_period_layer: macro_period_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &sl 5>;
+            label = "MACRO_PERIOD_LAYER";
+        };
     };
 
     combos {
@@ -129,7 +143,7 @@
 &trans  &trans                 &trans               &trans                 &trans                   &trans              &trans                                         &trans         &trans                  &trans           &trans               &trans                       &trans                        &trans
 &trans  &trans                 &kp GREATER_THAN     &kp RIGHT_BRACE        &kp RIGHT_PARENTHESIS    &kp RIGHT_BRACKET   &trans                                         &trans         &kp PLUS                &kp EQUAL        &kp ESCAPE           &kp UNDER                    &kp MINUS                     &trans
 &trans  &ht_num EXCL NUMBER_1  &ht_num AT NUMBER_2  &ht_num HASH NUMBER_3  &ht_num DOLLAR NUMBER_4  &ht_num PERCENT N5  &trans  &trans  &trans      &trans     &trans  &trans         &ht_num CARET NUMBER_6  &ht_num AMPS N7  &ht_num ASTERISK N8  &ht_num LEFT_PARENTHESIS N9  &ht_num RIGHT_PARENTHESIS N0  &trans
-&trans  &kp SPACE              &kp LESS_THAN        &kp LEFT_BRACE         &kp LEFT_PARENTHESIS     &kp LEFT_BRACKET                    &trans      &trans                            &kp BACKSLASH           &kp SLASH        &macro_comma_layer   &trans                       &trans                        &trans
+&trans  &kp SPACE              &kp LESS_THAN        &kp LEFT_BRACE         &kp LEFT_PARENTHESIS     &kp LEFT_BRACKET                    &trans      &trans                            &kp BACKSLASH           &kp SLASH        &macro_comma_layer   &macro_period_layer          &macro_colon_layer            &trans
 &trans  &trans                 &kp CAPS             &trans                 &trans                                       &trans  &trans  &trans      &kp SPACE  &trans  &kp BACKSPACE                          &trans           &trans               &trans                       &trans                        &trans
             >;
         };
