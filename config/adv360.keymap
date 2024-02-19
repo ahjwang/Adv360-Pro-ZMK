@@ -7,15 +7,15 @@
 
 / {
     behaviors {
-      #include "macros.dtsi"
+        #include "macros.dtsi"
       #include "version.dtsi"
       #ifndef VERSION_MACRO
 
-        macro1: macro1 {
+        macro_comma_space: macro_comma_space {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(T) &kp Y &kp P &kp E &kp SPACE &kp S &kp O &kp M &kp E &kp T &kp H &kp I &kp N &kp G &kp DOT &kp DOT &kp DOT>;
-            label = "macro1";
+            bindings = <&kp COMMA &kp SPACE>;
+            label = "macro_comma_space";
         };
 
         #endif
@@ -84,8 +84,8 @@
         };
 
         combo_macro1 {
-            bindings = <&macro_quotes>;
-            key-positions = <22 24>;
+            bindings = <&macro_comma_space>;
+            key-positions = <56 70>;
         };
     };
 
