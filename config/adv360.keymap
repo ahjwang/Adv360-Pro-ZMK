@@ -68,6 +68,24 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
+
+        colon_question: colon_question {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COLON_QUESTION";
+            bindings = <&kp COLON>, <&kp QUESTION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        backspace_del: backspace_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_DEL";
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -76,27 +94,6 @@
             #binding-cells = <0>;
             bindings = <&kp COMMA &kp SPACE>;
             label = "macro_comma_space";
-        };
-
-        macro_comma_layer: macro_comma_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA &sl 5>;
-            label = "MACRO_COMMA_LAYER";
-        };
-
-        macro_colon_layer: macro_colon_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp COLON &sl 5>;
-            label = "MACRO_COLON_LAYER";
-        };
-
-        macro_period_layer: macro_period_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp COLON &sl 5>;
-            label = "MACRO_PERIOD_LAYER";
         };
 
         space_after: space_after {
@@ -129,7 +126,7 @@
 &sl 1                  &kp N1             &kp N2      &kp N3    &kp N4     &kp N5  &bt BT_SEL 4                                                                            &bt BT_CLR  &kp N6  &kp N7  &kp N8     &kp N9    &kp N0             &sl 2
 &kp TAB                &kp Q              &kp W       &kp E     &kp R      &kp T   &bt BT_SEL 0                                                                            &bt BT_NXT  &kp Y   &kp U   &kp I      &kp O     &kp P              &kp GRAVE
 &sk_cust LEFT_SHIFT    &kp A              &kp S       &kp D     &kp F      &kp G   &bt BT_SEL 1     &bootloader      &kp C_BRIGHTNESS_INC       &bl BL_TOG    &bootloader  &bt BT_PRV  &kp H   &kp J   &kp K      &kp L     &kp APOS           &sk RIGHT_SHIFT
-&sk_cust LCMD          &kp Z              &kp X       &kp C     &kp V      &kp B                                     &kp C_BRIGHTNESS_DEC       &bl BL_CYCLE                           &kp N   &kp M   &kp COMMA  &kp DOT   &kp SLASH          &sk_cust RIGHT_ALT
+&sk_cust LCMD          &kp Z              &kp X       &kp C     &kp V      &kp B                                     &kp C_BRIGHTNESS_DEC       &bl BL_CYCLE                           &kp N   &kp M   &kp COMMA  &kp DOT   &colon_question    &sk_cust RIGHT_ALT
 &sk_cust LEFT_CONTROL  &sk_cust LC(LCMD)  &caps_word  &kp LEFT  &kp RIGHT          &code_layer 3 3  &lt_cust 4 LCMD  &sk_cust LC(LA(LCMD))      &kp DEL       &kp ENTER    &kp SPACE           &kp UP  &kp DOWN   &kp SEMI  &sk_cust LC(LALT)  &sk_cust RIGHT_CONTROL
             >;
         };
@@ -156,21 +153,21 @@
 
         code {
             bindings = <
-&trans  &trans           &trans                     &trans                    &trans                          &trans             &trans                                         &trans         &trans             &trans              &trans              &trans               &trans              &trans
-&trans  &kp TAB          &space_after LESS_THAN     &space_after RIGHT_BRACE  &space_after RIGHT_PARENTHESIS  &space_after RBKT  &trans                                         &trans         &space_after PLUS  &space_after EQUAL  &kp ESCAPE          &space_after UNDER   &space_after MINUS  &trans
-&trans  &space_after N1  &space_after N2            &space_after N3           &space_after N4                 &space_after N5    &trans  &trans  &trans      &trans     &trans  &trans         &space_after N6    &space_after N7     &space_after N8     &space_after N9      &space_after N0     &trans
-&trans  &kp SPACE        &space_after GREATER_THAN  &space_after LEFT_BRACE   &space_after LEFT_PARENTHESIS   &space_after LBKT                  &trans      &trans                            &space_after BSLH  &space_after FSLH   &space_after COMMA  &space_after PERIOD  &space_after COLON  &trans
-&trans  &trans           &kp CAPS                   &trans                    &trans                                             &trans  &trans  &trans      &kp SPACE  &trans  &kp BACKSPACE                     &trans              &trans              &trans               &trans              &trans
+&trans  &trans           &trans                     &trans                    &trans                          &trans             &trans                                         &trans          &trans             &trans              &trans              &trans               &trans              &trans
+&trans  &kp TAB          &space_after LESS_THAN     &space_after RIGHT_BRACE  &space_after RIGHT_PARENTHESIS  &space_after RBKT  &trans                                         &trans          &space_after PLUS  &space_after EQUAL  &kp ESCAPE          &space_after UNDER   &space_after MINUS  &trans
+&trans  &space_after N1  &space_after N2            &space_after N3           &space_after N4                 &space_after N5    &trans  &trans  &trans      &trans     &trans  &trans          &space_after N6    &space_after N7     &space_after N8     &space_after N9      &space_after N0     &trans
+&trans  &kp SPACE        &space_after GREATER_THAN  &space_after LEFT_BRACE   &space_after LEFT_PARENTHESIS   &space_after LBKT                  &trans      &trans                             &space_after BSLH  &space_after FSLH   &space_after COMMA  &space_after PERIOD  &space_after COLON  &trans
+&trans  &trans           &kp CAPS                   &trans                    &trans                                             &trans  &trans  &trans      &kp SPACE  &trans  &backspace_del                     &trans              &trans              &trans               &trans              &trans
             >;
         };
 
         nav {
             bindings = <
-&trans  &trans     &trans            &trans      &trans      &trans  &trans                                         &trans         &trans         &trans           &kp RG(UP_ARROW)    &trans           &trans  &trans
-&trans  &trans     &trans            &trans      &trans      &trans  &trans                                         &trans         &kp PAGE_UP    &kp LG(LEFT)     &kp UP_ARROW        &kp RG(RIGHT)    &trans  &trans
-&trans  &trans     &trans            &trans      &trans      &trans  &trans  &trans  &trans      &trans     &trans  &trans         &kp PAGE_DOWN  &kp LEFT_ARROW   &kp DOWN_ARROW      &kp RIGHT_ARROW  &trans  &trans
-&trans  &kp SPACE  &trans            &trans      &trans      &trans                  &trans      &trans                            &trans         &trans           &kp LG(DOWN_ARROW)  &kt RIGHT_SHIFT  &trans  &trans
-&trans  &trans     &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_NEXT          &trans  &trans  &trans      &kp SPACE  &trans  &kp BACKSPACE                 &kp C_VOLUME_UP  &kp C_VOLUME_DOWN   &kp C_MUTE       &trans  &trans
+&trans  &trans     &trans            &trans      &trans      &trans  &trans                                         &trans          &trans         &trans           &kp RG(UP_ARROW)    &trans           &trans  &trans
+&trans  &trans     &trans            &trans      &trans      &trans  &trans                                         &trans          &kp PAGE_UP    &kp LG(LEFT)     &kp UP_ARROW        &kp RG(RIGHT)    &trans  &trans
+&trans  &trans     &trans            &trans      &trans      &trans  &trans  &trans  &trans      &trans     &trans  &trans          &kp PAGE_DOWN  &kp LEFT_ARROW   &kp DOWN_ARROW      &kp RIGHT_ARROW  &trans  &trans
+&trans  &kp SPACE  &trans            &trans      &trans      &trans                  &trans      &trans                             &trans         &trans           &kp LG(DOWN_ARROW)  &kt RIGHT_SHIFT  &trans  &trans
+&trans  &trans     &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_NEXT          &trans  &trans  &trans      &kp SPACE  &trans  &backspace_del                 &kp C_VOLUME_UP  &kp C_VOLUME_DOWN   &kp C_MUTE       &trans  &trans
             >;
         };
 
