@@ -134,11 +134,6 @@
             key-positions = <36 52>;
         };
 
-        R_bootloader {
-            bindings = <&bootloader>;
-            key-positions = <37 53>;
-        };
-
         alt_cmd {
             bindings = <&sk_cust LA(LCMD)>;
             key-positions = <66 69>;
@@ -152,8 +147,8 @@
             bindings = <
 &sl 1                  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &bt BT_SEL 4                                                                                             &bt BT_CLR  &kp N6  &kp N7  &kp N8     &kp N9     &kp N0     &sl 2
 &kp TAB                &kp Q      &kp W     &kp E     &kp R      &kp T   &bt BT_SEL 0                                                                                             &bt BT_NXT  &kp Y   &kp U   &kp I      &kp O      &kp P      &kp GRAVE
-&sk_cust LEFT_SHIFT    &kp A      &kp S     &kp D     &kp F      &kp G   &bt BT_SEL 1       &sl 4      &sk_cust LC(LS(LCMD))      &sk_cust RC(RS(RIGHT_ALT))  &sk_cust RS(RCTRL)  &bt BT_PRV  &kp H   &kp J   &kp K      &kp L      &kp APOS   &sk RIGHT_SHIFT
-&sk_cust LCMD          &kp Z      &kp X     &kp C     &kp V      &kp B                                 &sk_cust LC(LCMD)          &sk_cust RC(RIGHT_ALT)                                      &kp N   &kp M   &kp COMMA  &kp DOT    &kp SLASH  &sk_cust RIGHT_ALT
+&sk_cust LCMD          &kp A      &kp S     &kp D     &kp F      &kp G   &bt BT_SEL 1       &sl 4      &sk_cust LC(LS(LCMD))      &sk_cust RC(RS(RIGHT_ALT))  &sk_cust RS(RCTRL)  &bt BT_PRV  &kp H   &kp J   &kp K      &kp L      &kp APOS   &sk RALT
+&sk_cust LEFT_SHIFT    &kp Z      &kp X     &kp C     &kp V      &kp B                                 &sk_cust LC(LCMD)          &sk_cust RC(RIGHT_ALT)                                      &kp N   &kp M   &kp COMMA  &kp DOT    &kp SLASH  &sk_cust RIGHT_SHIFT
 &sk_cust LEFT_CONTROL  &kp EQUAL  &kp PLUS  &kp LEFT  &kp RIGHT          &lt_cust 3 ESCAPE  &kp ENTER  &sk_cust LS(LCMD)          &sk_cust LS(RIGHT_ALT)      &backspace_del      &kp SPACE           &kp UP  &kp DOWN   &kp MINUS  &kp UNDER  &sk_cust RIGHT_CONTROL
             >;
         };
