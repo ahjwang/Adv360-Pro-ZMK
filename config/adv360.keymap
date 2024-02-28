@@ -175,11 +175,11 @@
 
         code {
             bindings = <
-&trans  &trans     &trans         &trans                 &trans    &trans           &trans                                      &trans  &trans    &trans     &trans              &trans          &trans       &trans
-&trans  &kp N1     &kp N2         &kp N3                 &kp N4    &kp N5           &trans                                      &trans  &kp N6    &kp N7     &kp N8              &kp N9          &kp N0       &trans
-&trans  &kp TAB    &sk LG(LALT)   &kp LEFT_PARENTHESIS   &kp LBKT  &kp LEFT_BRACE   &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN   &kp UP              &kp RIGHT       &colon_semi  &trans
-&trans  &kp LG(Z)  &sk_cust LCMD  &kp RIGHT_PARENTHESIS  &kp RBKT  &kp RIGHT_BRACE                  &trans      &trans                  &kp BSLH  &kp EQUAL  &space_after COMMA  &under_greater  &kp MINUS    &trans
-&trans  &kp CAPS   &caps_word     &trans                 &trans                     &trans  &trans  &trans      &trans  &trans  &trans            &trans     &trans              &trans          &trans       &trans
+&trans  &trans     &trans             &trans                 &trans    &trans           &trans                                      &trans  &trans    &trans     &trans              &trans          &trans       &trans
+&trans  &kp N1     &kp N2             &kp N3                 &kp N4    &kp N5           &trans                                      &trans  &kp N6    &kp N7     &kp N8              &kp N9          &kp N0       &trans
+&trans  &kp TAB    &sk_cust LCMD      &kp LEFT_PARENTHESIS   &kp LBKT  &kp LEFT_BRACE   &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN   &kp UP              &kp RIGHT       &colon_semi  &trans
+&trans  &kp LG(Z)  &sk_cust LG(LALT)  &kp RIGHT_PARENTHESIS  &kp RBKT  &kp RIGHT_BRACE                  &trans      &trans                  &kp BSLH  &kp EQUAL  &space_after COMMA  &under_greater  &kp MINUS    &trans
+&trans  &kp CAPS   &caps_word         &trans                 &trans                     &trans  &trans  &trans      &trans  &trans  &trans            &trans     &trans              &trans          &trans       &trans
             >;
         };
 
