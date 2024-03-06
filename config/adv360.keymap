@@ -145,11 +145,11 @@
 
         main {
             bindings = <
-&sl 1                  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &bt BT_SEL 4                                                                                             &bt BT_CLR  &kp N6  &kp N7  &kp N8     &kp N9     &kp N0     &sl 2
-&kp TAB                &kp Q      &kp W     &kp E     &kp R      &kp T   &bt BT_SEL 0                                                                                             &bt BT_NXT  &kp Y   &kp U   &kp I      &kp O      &kp P      &kp GRAVE
-&sk_cust LCMD          &kp A      &kp S     &kp D     &kp F      &kp G   &bt BT_SEL 1       &sl 4      &sk_cust LC(LS(LCMD))      &sk_cust RC(RS(RIGHT_ALT))  &sk_cust RS(RCTRL)  &bt BT_PRV  &kp H   &kp J   &kp K      &kp L      &kp APOS   &sk RALT
-&sk_cust LEFT_SHIFT    &kp Z      &kp X     &kp C     &kp V      &kp B                                 &sk_cust LC(LCMD)          &sk_cust RC(RIGHT_ALT)                                      &kp N   &kp M   &kp COMMA  &kp DOT    &kp SLASH  &sk_cust RIGHT_SHIFT
-&sk_cust LEFT_CONTROL  &kp EQUAL  &kp PLUS  &kp LEFT  &kp RIGHT          &lt_cust 3 ESCAPE  &kp ENTER  &sl 4                      &sl 4                       &backspace_del      &kp SPACE           &kp UP  &kp DOWN   &kp MINUS  &kp UNDER  &sk_cust RIGHT_CONTROL
+&sl 1                  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &bt BT_SEL 4                                                                                                         &bt BT_CLR  &kp N6  &kp N7  &kp N8     &kp N9     &kp N0     &sl 2
+&kp CAPS               &kp Q      &kp W     &kp E     &kp R      &kp T   &bt BT_SEL 0                                                                                                         &bt BT_NXT  &kp Y   &kp U   &kp I      &kp O      &kp P      &kp GRAVE
+&sk_cust LCMD          &kp A      &kp S     &kp D     &kp F      &kp G   &bt BT_SEL 1       &sk_cust LC(LG(RALT))  &sk_cust LC(LS(LCMD))      &sk_cust RC(RS(RIGHT_ALT))  &sk_cust RS(RCTRL)  &bt BT_PRV  &kp H   &kp J   &kp K      &kp L      &kp APOS   &sk RALT
+&sk_cust LEFT_SHIFT    &kp Z      &kp X     &kp C     &kp V      &kp B                                             &sk_cust LC(LCMD)          &sk_cust RC(RIGHT_ALT)                                      &kp N   &kp M   &kp COMMA  &kp DOT    &kp SLASH  &sk_cust RIGHT_SHIFT
+&sk_cust LEFT_CONTROL  &kp EQUAL  &kp PLUS  &kp LEFT  &kp RIGHT          &lt_cust 3 ESCAPE  &kp ENTER              &sl 4                      &sl 4                       &backspace_del      &kp SPACE           &kp UP  &kp DOWN   &kp MINUS  &kp UNDER  &sk_cust RIGHT_CONTROL
             >;
         };
 
@@ -175,11 +175,11 @@
 
         code {
             bindings = <
-&trans  &trans     &trans             &trans                 &trans      &trans           &trans                                      &trans  &trans    &trans     &trans              &trans          &trans       &trans
-&trans  &kp N1     &kp N2             &kp N3                 &kp N4      &kp N5           &trans                                      &trans  &kp N6    &kp N7     &kp N8              &kp N9          &kp N0       &trans
-&trans  &kp TAB    &sk_cust LCMD      &kp LEFT_PARENTHESIS   &kp LBKT    &kp LEFT_BRACE   &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN   &kp UP              &kp RIGHT       &colon_semi  &trans
-&trans  &kp LG(Z)  &sk_cust LG(LALT)  &kp RIGHT_PARENTHESIS  &kp RBKT    &kp RIGHT_BRACE                  &trans      &trans                  &kp BSLH  &kp EQUAL  &space_after COMMA  &under_greater  &kp MINUS    &trans
-&trans  &kp CAPS   &kp LC(LG(RALT))   &kp LG(GRAVE)          &caps_word                   &trans  &trans  &trans      &trans  &trans  &trans            &trans     &trans              &trans          &trans       &trans
+&trans  &trans       &trans             &trans                 &trans      &trans           &trans                                      &trans  &trans    &trans     &trans  &trans     &trans         &trans
+&trans  &kp N1       &kp N2             &kp N3                 &kp N4      &kp N5           &trans                                      &trans  &kp N6    &kp N7     &kp N8  &kp N9     &kp N0         &trans
+&trans  &kp LS(TAB)  &sk_cust LG(RALT)  &kp LEFT_PARENTHESIS   &kp LBKT    &kp LEFT_BRACE   &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN   &kp UP  &kp RIGHT  &sk_cust RCMD  &trans
+&trans  &kp LG(Z)    &kp TAB            &kp RIGHT_PARENTHESIS  &kp RBKT    &kp RIGHT_BRACE                  &trans      &trans                  &kp BSLH  &kp EQUAL  &trans  &trans     &colon_semi    &trans
+&trans  &trans       &trans             &sk_cust LC(LG(RALT))  &caps_word                   &trans  &trans  &trans      &trans  &trans  &trans            &kp GRAVE  &trans  &trans     &trans         &trans
             >;
         };
 
