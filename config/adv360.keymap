@@ -175,11 +175,11 @@
 
         code {
             bindings = <
-&trans  &trans       &trans             &trans                 &trans      &trans           &trans                                      &trans  &trans    &trans     &trans  &trans     &trans         &trans
-&trans  &kp N1       &kp N2             &kp N3                 &kp N4      &kp N5           &trans                                      &trans  &kp N6    &kp N7     &kp N8  &kp N9     &kp N0         &trans
-&trans  &kp LS(TAB)  &sk_cust LG(RALT)  &kp LEFT_PARENTHESIS   &kp LBKT    &kp LEFT_BRACE   &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN   &kp UP  &kp RIGHT  &sk_cust RCMD  &trans
-&trans  &kp LG(Z)    &kp TAB            &kp RIGHT_PARENTHESIS  &kp RBKT    &kp RIGHT_BRACE                  &trans      &trans                  &kp BSLH  &kp EQUAL  &trans  &trans     &colon_semi    &trans
-&trans  &trans       &trans             &sk_cust LC(LG(RALT))  &caps_word                   &trans  &trans  &trans      &trans  &trans  &trans            &kp GRAVE  &trans  &trans     &trans         &trans
+&trans  &trans             &trans             &trans                 &trans     &trans           &trans                                      &trans  &trans    &trans     &trans  &trans     &trans         &trans
+&trans  &kp N1             &kp N2             &kp N3                 &kp N4     &kp N5           &trans                                      &trans  &kp N6    &kp N7     &kp N8  &kp N9     &kp N0         &trans
+&trans  &sk_cust LC(LGUI)  &sk_cust LG(RALT)  &kp LEFT_PARENTHESIS   &kp LBKT   &kp LEFT_BRACE   &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN   &kp UP  &kp RIGHT  &sk_cust RCMD  &trans
+&trans  &kp LG(Z)          &kp TAB            &kp RIGHT_PARENTHESIS  &kp RBKT   &kp RIGHT_BRACE                  &trans      &trans                  &kp BSLH  &kp EQUAL  &trans  &trans     &colon_semi    &trans
+&trans  &trans             &caps_word         &trans                 &kp TILDE                   &trans  &trans  &trans      &trans  &trans  &trans            &kp GRAVE  &trans  &trans     &trans         &trans
             >;
         };
 
