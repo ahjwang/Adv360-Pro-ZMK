@@ -181,11 +181,11 @@
 
         code {
             bindings = <
-&trans  &trans             &trans             &trans             &trans                 &trans                 &trans                                      &trans  &trans    &trans    &trans  &trans     &trans         &trans
-&trans  &kp N1             &kp N2             &kp N3             &kp N4                 &kp N5                 &trans                                      &trans  &kp N6    &kp N7    &kp N8  &kp N9     &kp N0         &trans
-&trans  &sk_cust LC(LGUI)  &sk_cust LG(RALT)  &sk_cust LC(LALT)  &sk_cust LC(LG(RALT))  &sk_cust LS(LC(RCMD))  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &sk_cust RCMD  &trans
-&trans  &kp LG(Z)          &kp TAB            &td_paren          &td_bracket            &td_brace                              &trans      &trans                  &trans    &trans    &trans  &trans     &trans         &trans
-&trans  &trans             &caps_word         &trans             &trans                                        &trans  &trans  &trans      &trans  &trans  &trans            &trans    &trans  &trans     &trans         &trans
+&trans  &trans                 &trans         &trans         &trans          &trans                                     &trans                                      &trans  &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &kp N1                 &kp N2         &kp N3         &kp N4          &kp N5                                     &trans                                      &trans  &kp N6    &kp N7    &kp N8  &kp N9     &kp N0  &trans
+&trans  &sk_cust LEFT_CONTROL  &sk_cust LALT  &sk_cust LCMD  &sk_cust LSHFT  &sk_cust C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&trans  &kp LG(Z)              &kp TAB        &td_paren      &td_bracket     &td_brace                                                  &trans      &trans                  &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans                 &caps_word     &trans         &trans                                                     &trans  &trans  &trans      &trans  &trans  &trans            &trans    &trans  &trans     &trans  &trans
             >;
         };
     };
